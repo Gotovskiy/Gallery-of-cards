@@ -9,8 +9,10 @@ body {
   overflow: hidden;
   margin: 0;
   background-image: url("https://images.wallpaperscraft.ru/image/single/gradient_zelenyj_tekstura_131365_1920x1080.jpg");
+  background-position: center center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-attachment: fixed;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -30,7 +32,7 @@ body {
   color: #fff;
   flex: 1;
   background-size: cover; 
-  background-position: center;
+  background-position: right center;
   background-repeat: no-repeat;
   position: relative;
   transition: all 500ms ease-in-out;
@@ -46,8 +48,70 @@ body {
 }
 .slide.active {
   flex: 10;
+  background-size: cover;
 }
 .slide.active h3 {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
 }
+@media (min-width: 1100px) {
+.slide:nth-child(1) {
+  background-size: auto auto;
+  background-position: -50px -750px;
+}
+.slide:nth-child(2) {
+  background-size: auto auto;
+  background-position: -50px -620px;
+}
+.slide:nth-child(3) {
+  background-size: auto auto;
+  background-position: -50px -530px;
+}
+.slide:nth-child(4) {
+  background-size: auto auto;
+          background-position: -50px -320px;
+}
+.slide:nth-child(5) {
+  background-size: auto auto;
+  background-position: -50px -350px;
+}}
+@media (max-width: 1100px) {
+  .slide {
+    background-size: cover ;
+    background-position: center center;
+  }
+.slide.active {
+background-size: cover ; 
+background-position: right center }
+@media (max-width: 768px) {
+  .container {
+    display: block;
+  }
+  .slide { 
+    height: 5vh;
+    background-size: cover;
+  }
+  .slide.active {
+    height: 55vh;
+  }
+    .slide:nth-child(1) {
+      background-size: cover;
+      background-position: center;
+    }
+    .slide:nth-child(2) {
+      background-size: cover;
+      background-position: center;
+    }
+    .slide:nth-child(3) {
+      background-size: cover;
+      background-position: center;
+    }
+    .slide:nth-child(4) {
+      background-size: cover;
+      background-position: center;
+    }
+    .slide:nth-child(5) {
+      background-size: cover;
+      background-position: center;
+    }
+  }}
